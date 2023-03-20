@@ -58,12 +58,6 @@ jobs:
       run: |
         rm -f ipv4-org.conf ipv6-org.conf
 
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      with:
-        ref: ip-lists
-        fetch-depth: 0
-
     - name: Commit file
       run: |
         git config --global user.name "GitHub Actions"
