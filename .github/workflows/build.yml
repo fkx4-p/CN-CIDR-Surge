@@ -57,7 +57,6 @@ jobs:
     - name: Remove unused files && Check files
       run: |
         rm -f ipv4-org.conf ipv6-org.conf
-        ls -lh
 
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -68,6 +67,7 @@ jobs:
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
+        ls -lh
         git add .
         git checkout -b ip-lists
         git commit -m "Update $(date +'%Y-%m-%d')"
