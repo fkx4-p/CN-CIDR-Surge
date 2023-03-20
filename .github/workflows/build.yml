@@ -51,8 +51,8 @@ jobs:
         echo '#                                         #' >> ip.conf
         echo '# Data source: gaoyifan/china-operator-ip #' >> ip.conf
         echo '###########################################' >> ip.conf
-        cat ip-org4.conf >> ip.conf
-        cat ip-org6.conf >> ip.conf
+        cat ipv4-org.conf >> ip.conf
+        cat ipv6-org.conf >> ip.conf
 
     - name: Remove unused files
       run: |
