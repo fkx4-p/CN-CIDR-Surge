@@ -61,13 +61,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       with:
+        ref: ip-lists
         fetch-depth: 0
 
     - name: Commit file
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        ls -lh
         git add .
         git checkout -b ip-lists
         git commit -m "Update $(date +'%Y-%m-%d')"
