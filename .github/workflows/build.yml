@@ -17,7 +17,7 @@ jobs:
       with:
         ref: ip-lists
         fetch-depth: 0
-        
+
     - name: Download file
       run: |
         curl -s -o ipv4-org.conf "https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china.txt"
@@ -69,6 +69,5 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
         git add .
-        git checkout -b ip-lists
         git commit -m "Update $(date +'%Y-%m-%d')"
         git push origin HEAD:ip-lists
