@@ -54,9 +54,10 @@ jobs:
         cat ipv4-org.conf >> ip.conf
         cat ipv6-org.conf >> ip.conf
 
-    - name: Remove unused files
+    - name: Remove unused files && Check files
       run: |
         rm -f ipv4-org.conf ipv6-org.conf
+        ll -h
 
     - name: Checkout repository
       uses: actions/checkout@v2
