@@ -59,9 +59,9 @@ jobs:
         rm -f ipv4-org.conf ipv6-org.conf
 
     - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Commit file
       run: |
