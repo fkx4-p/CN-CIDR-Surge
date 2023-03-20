@@ -24,39 +24,39 @@ jobs:
       run: sed -i 's/^/IP-CIDR6,/' ipv6-org.conf
 
     - name: Generate ipv4.conf
-        run: |
-          echo '###########################################' >> ipv4.conf
-          echo '# CN-CIDR4 for Surge                      #' >> ipv4.conf
-          echo "# Last Updated: $(date +'%FT%TZ')      #" >> ipv4.conf
-          echo '#                                         #' >> ipv4.conf
-          echo '# Data source: gaoyifan/china-operator-ip #' >> ipv4.conf
-          echo '###########################################' >> ipv4.conf
-          cat ipv4-org.conf >> ipv4.conf
+      run: |
+        echo '###########################################' >> ipv4.conf
+        echo '# CN-CIDR4 for Surge                      #' >> ipv4.conf
+        echo "# Last Updated: $(date +'%FT%TZ')      #" >> ipv4.conf
+        echo '#                                         #' >> ipv4.conf
+        echo '# Data source: gaoyifan/china-operator-ip #' >> ipv4.conf
+        echo '###########################################' >> ipv4.conf
+        cat ipv4-org.conf >> ipv4.conf
 
     - name: Generate ipv6.conf
-        run: |
-          echo '###########################################' >> ipv6.conf
-          echo '# CN-CIDR6 for Surge                      #' >> ipv6.conf
-          echo "# Last Updated: $(date +'%FT%TZ')      #" >> ipv6.conf
-          echo '#                                         #' >> ipv6.conf
-          echo '# Data source: gaoyifan/china-operator-ip #' >> ipv6.conf
-          echo '###########################################' >> ipv6.conf
-          cat ipv6-org.conf >> ipv6.conf
+      run: |
+        echo '###########################################' >> ipv6.conf
+        echo '# CN-CIDR6 for Surge                      #' >> ipv6.conf
+        echo "# Last Updated: $(date +'%FT%TZ')      #" >> ipv6.conf
+        echo '#                                         #' >> ipv6.conf
+        echo '# Data source: gaoyifan/china-operator-ip #' >> ipv6.conf
+        echo '###########################################' >> ipv6.conf
+        cat ipv6-org.conf >> ipv6.conf
 
     - name: Generate ip.conf
-        run: |
-          echo '###########################################' >> ip.conf
-          echo '# CN-CIDR for Surge                       #' >> ip.conf
-          echo "# Last Updated: $(date +'%FT%TZ')      #" >> ip.conf
-          echo '#                                         #' >> ip.conf
-          echo '# Data source: gaoyifan/china-operator-ip #' >> ip.conf
-          echo '###########################################' >> ip.conf
-          cat ip-org4.conf >> ip.conf
-          cat ip-org6.conf >> ip.conf
+      run: |
+        echo '###########################################' >> ip.conf
+        echo '# CN-CIDR for Surge                       #' >> ip.conf
+        echo "# Last Updated: $(date +'%FT%TZ')      #" >> ip.conf
+        echo '#                                         #' >> ip.conf
+        echo '# Data source: gaoyifan/china-operator-ip #' >> ip.conf
+        echo '###########################################' >> ip.conf
+        cat ip-org4.conf >> ip.conf
+        cat ip-org6.conf >> ip.conf
 
     - name: Remove unused files
-        run: |
-          rm -f ipv4-org.conf ipv6-org.conf
+      run: |
+        rm -f ipv4-org.conf ipv6-org.conf
 
     - name: Commit file
       uses: actions/checkout@v2
