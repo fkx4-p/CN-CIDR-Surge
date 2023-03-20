@@ -62,7 +62,7 @@ jobs:
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        git switch -c ip-lists
         git add .
+        git switch -c ip-lists
         git commit -m "Update $(date +'%Y-%m-%d')"
         git push origin HEAD:ip-lists
