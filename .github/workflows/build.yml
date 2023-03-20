@@ -57,7 +57,7 @@ jobs:
     - name: Remove unused files && Check files
       run: |
         rm -f ipv4-org.conf ipv6-org.conf
-        ll -h
+        ls -lh
 
     - name: Checkout repository
       uses: actions/checkout@v2
