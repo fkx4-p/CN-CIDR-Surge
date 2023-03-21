@@ -17,6 +17,10 @@ jobs:
       with:
         ref: ip-lists
         fetch-depth: 0
+    
+    - name: Remove filse
+      run: |
+        rm -f ipv4.conf ipv6.conf ip.conf
 
     - name: Download file
       run: |
